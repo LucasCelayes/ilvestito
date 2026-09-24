@@ -261,15 +261,9 @@
       margin: 0 auto;
       border: 1px solid var(--dorado);
       background: var(--carbon-2);
-      min-height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 30px;
-      color: var(--texto-suave);
+      overflow: hidden;
     }
-    .ayuda-caja iframe { width: 100%; height: 650px; border: none; }
+    .ayuda-caja iframe { width: 100%; height: 650px; border: none; display: block; }
 
     /* ===== CONTACTO ===== */
     #contacto { background: var(--carbon); }
@@ -489,8 +483,7 @@
       </div>
       <p class="ayuda-intro">¿Tenés alguna consulta sobre precios, reservas, retiros o devoluciones? Preguntale a nuestro asistente con inteligencia artificial, disponible las 24 horas.</p>
       <div class="ayuda-caja">
-        <!-- AQUÍ VA EL IFRAME DE CHATBASE -->
-        <p>El asistente virtual estará disponible muy pronto.</p>
+        <iframe src="https://www.chatbase.co/chatbot-iframe/QySstcjd0Fg0Q2XY3rt1T" title="Asistente virtual de Il Vestito" allow="microphone"></iframe>
       </div>
     </div>
   </section>
@@ -542,6 +535,11 @@
     Alquiler de trajes · Agraciada 4273, Montevideo · 097 931 236<br>
     © 2026 Il Vestito. Todos los derechos reservados.
   </footer>
+
+  <!-- ===== CHATBASE: burbuja de chat ===== -->
+  <script>
+  (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="QySstcjd0Fg0Q2XY3rt1T";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+  </script>
 
 </body>
 </html>
